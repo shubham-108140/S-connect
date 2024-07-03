@@ -1,0 +1,65 @@
+
+.post-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+  }
+  
+  .title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .description h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .footer button:hover {
+    color: #0056b3;
+  }
+  
+  .footer p:last-of-type {
+    block-size: fit-content;
+    margin-left:60%;
+    margin-right: auto;
+    
+    font-size: 16px;
+    color: #555;
+    justify-self: end;
+  }

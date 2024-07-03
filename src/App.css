@@ -1,11 +1,87 @@
-.App {
+/* .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: slateblue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar .links {
+  text-align: center;
+  margin-right: 50px;
+
+}
+.links a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 3px solid white;
+  padding-bottom: 2px;
+  margin: 10px;
+}
+.navbar .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+.user p {
+  font-size: 15px;
+  margin-right: 10px;
+  color: white; 
+}
+.user img {
+  width: 3rem;
+  height: 3rem;
+  font-size: 15px;
+  border-radius: 2rem;
+}
+input,
+textarea {
+  font-family: "Nunito", sans-serif;
+}
+.create-post {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+form {
+  margin-top:2rem;
+  margin-left:37.5%;
+  padding: 30px 20px;
+  width: 320px;
+  border-radius: 7px;
+  background-color: white;
+  backdrop-filter: blur(5px);
+  background-color: rgba(43, 0, 255, 0.588);
+  overflow: hidden;
+}
+
+input,
+textarea {
+  padding: 8px 10px;
+  margin: 3px 8px 16px 8px;
+  background-color: rgba(222, 239, 248, 0.877);
+  border: 0px transparent;
+  border-radius: 5px;
+  color: rgb(97, 4, 184);
+  font-size: 16px;
+  z-index: 1;
+}
+.submitForm:hover {
+ cursor: pointer;
+}
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -34,5 +110,169 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} 
+
+ */
+
+ /* App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 3.75rem; /* 60px converted to rem */
+  background-color: #4267b2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem; /* 20px converted to rem */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem; /* 24px converted to rem */
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  padding: 0 0.9375rem; /* 15px converted to rem */
+  margin: 0 0.3125rem; /* 5px converted to rem */
+}
+
+.navbar .user {
+  display: flex;
+  align-items: center;
+}
+
+.user p {
+  font-size: 0.9375rem; /* 15px converted to rem */
+  margin-right: 0.625rem; /* 10px converted to rem */
+  color: white;
+}
+
+.user img {
+  width: 2.5rem; /* 40px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin-top: 6.25rem; /* To account for the fixed navbar */
+  justify-content: center;
+}
+
+.sidebar,
+.right-sidebar {
+  width: 20%;
+  background-color: #fff;
+  padding: 1.25rem; /* 20px converted to rem */
+  border: 1px solid #ddd;
+}
+
+.main-content {
+  width: 60%;
+  padding: 1.25rem; /* 20px converted to rem */
+}
+.main {
+  width: 60rem; /* Adjusted width for desktop view */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem; /* Adjusted padding for spacing */
+  margin-top: 6.25rem; /* Adjusted margin-top to clear the fixed navbar */
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 100%; /* Full width for mobile view */
+    padding: 1rem; /* Adjusted padding for spacing */
+    margin-top: 11.25rem; /* Adjusted margin-top for mobile view */
+  }
+}
+
+
+.create-post,
+.post-container {
+  background: #fff;
+  border-radius: 0.5rem; /* 8px converted to rem */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 1rem; /* 20px converted to rem */
+  padding: 1.25rem; /* 20px converted to rem */
+  border: 1px solid #ddd;
+}
+.create-post {
+  margin-top: 6.25rem;
+  
+}
+
+form {
+  width: 30rem;;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.625rem; /* 10px converted to rem */
+  margin: 0.625rem 0;
+  border-radius: 0.3125rem; /* 5px converted to rem */
+  border: 1px solid #ccc;
+  font-size: 1rem; /* 16px converted to rem */
+}
+
+.submitForm {
+  padding: 0.625rem; /* 10px converted to rem */
+  background-color: #4267b2;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem; /* 5px converted to rem */
+  cursor: pointer;
+}
+
+.submitForm:hover {
+  background-color: #365899;
+}
+
+@media (max-width: 48rem) {
+  /* 768px converted to rem */
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .right-sidebar,
+  .main-content {
+    width: 100%;
+    border: none;
+    padding: 0.625rem; /* 10px converted to rem */
+  }
+
+  .navbar .links {
+    flex-direction: column;
   }
 }
